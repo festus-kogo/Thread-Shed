@@ -116,3 +116,11 @@ green&white;,;09/15/17,   Gail Phelps   ;,;$30.52
 
 #------------------------------------------------
 '''
+
+**Break up `daily_sales` in easy to understand lists `customers`, `sales`, and `thread_sold`.**
+
+1. First, take a minute to inspect the string `daily_sales` in the code editor.
+
+How is each transaction stored? How is each piece of data within the transaction stored?
+
+Start thinking about how we can split up this string into its individual pieces of data.
