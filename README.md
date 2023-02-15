@@ -113,8 +113,6 @@ Eric Mcdaniel ;,;$29.70;,; green ;,; 09/15/17
 green&white;,;09/15/17,   Gail Phelps   ;,;$30.52   
 ;,; green&white&blue   ;,; 09/15/17 , Myrtle Morris 
 ;,;   $22.66   ;,; green&white&blue;,;09/15/17"""
-
-#------------------------------------------------
 '''
 
 **Break up `daily_sales` in easy to understand lists `customers`, `sales`, and `thread_sold`.**
@@ -124,3 +122,91 @@ green&white;,;09/15/17,   Gail Phelps   ;,;$30.52
 How is each transaction stored? How is each piece of data within the transaction stored?
 
 Start thinking about how we can split up this string into its individual pieces of data.
+
+2. It looks like each transaction is separated from the next transaction by a `,`, and then each piece of data within a transaction is separated by the artifact `;,;`.
+
+If we want to split up daily_sales into a list of individual transactions, we are going to want to split by ,, but first, we need to replace the artifact `;,;` to something without a comma, so we don’t split any transactions themselves.
+
+Replace all the instances of `;,;` in `daily_sales` with some other character and save the result to `daily_sales_replaced`.
+
+3. Now we can split the string into a list of each individual transaction.
+
+Split `daily_sales_replaced` around commas and save it to a new list `daily_transactions`.
+
+4. Print `daily_transactions`.
+
+How does it look?
+
+5. Our next step is to split each individual transaction into a list of its data points.
+
+First, define an empty list `daily_transactions_split`
+
+6. Now, iterate through `daily_transactions` (remember, this is a list of strings currently), and for each transaction, split the string around whatever character you replaced the `;,;` artifacts with in **Step 2**.
+
+Append each of these split strings (which are lists now) to our new list `daily_transactions_split`.
+
+7. Print `daily_transactions_split`.
+
+How’s it looking?
+
+8. It looks like each data item has inconsistent whitespace around it. First, define an empty list `transactions_clean`.
+
+Now, Iterate through `daily_transactions_split` and for each transaction iterate through the different data points and strip off any whitespace.
+
+Add each of these cleaned up transactions to the new list `transactions_clean`.
+
+9. Print `transactions_clean`.
+
+If you performed the last step correctly, you shouldn’t see any unnecessary whitespace.
+
+10. Create three empty lists. `customers`, `sales`, and `thread_sold`. We are going to collect the individual data points for each transaction in these lists.
+
+11. Now, iterate through `transactions_clean` and for each transaction:
+
+1. Append the customers name to `customers`.
+2. Append the amount of the sale to `sales`.
+3. Append the threads sold to `thread_sold`.
+
+12. Print `customers`, `sales`, and `thread_sold` to make sure each list is what you are expected.
+
+### Determine the total value of the days sales.
+
+13. Now we want to know how much Thread Shed made in a day.
+
+First, define a variable called `total_sales` and set it equal to `0`.
+
+14. Now, consider the list `sales`. It is a list of strings that we want to sum. In order for us to sum these values, we will have to remove the `$`, and set them equal to floats.
+
+Iterate through `sales` and for each item, strip off the `$`, set it equal to a float, and add it to `total_sales`
+
+
+15. Print `total_sales`.
+
+How much did we make today?
+
+### How much thread of any specific color was sold?
+
+16. Finally, we want to determine how many of each color thread we sold today. Let’s start with a single color, and then we’ll generalize it.
+
+First, print out `thread_sold` and inspect it.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
